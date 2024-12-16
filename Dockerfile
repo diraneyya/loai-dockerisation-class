@@ -7,5 +7,6 @@ RUN apk update && apk add curl
 # npm install -g pnpm 
 RUN npm install -g pnpm
 
-RUN echo "PNPM installed successfully (v$(pnpm --version))"
+# test changing entrypoint
+ENTRYPOINT [ "sh" ]
 
