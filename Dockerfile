@@ -13,9 +13,9 @@ WORKDIR /app
 # copy the application
 COPY . .
 
+RUN pnpm install
 RUN pnpm run website:build
-RUN pnpm run website:serve
 
 # test changing entrypoint
-ENTRYPOINT [ "sh" ]
+ENTRYPOINT [ "pnpm", "run", "website:serve" ]
 
