@@ -16,6 +16,8 @@ COPY . .
 RUN pnpm install
 RUN pnpm run website:build
 
+EXPOSE 3000
+
 # test changing entrypoint
 ENTRYPOINT [ "pnpm", "run", "website:serve" ]
 
