@@ -10,6 +10,9 @@ RUN npm install -g pnpm
 # change the working directory
 WORKDIR /app
 
+# copy the application
+COPY . .
+
 # RUN pnpm run website:build
 
 # test changing entrypoint
